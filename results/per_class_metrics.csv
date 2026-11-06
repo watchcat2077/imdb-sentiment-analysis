@@ -1,0 +1,7 @@
+exp_id,classifier,class,precision,recall,f1,support
+1.6,MultinomialNB(alpha=0.5),negative,0.8519,0.891,0.871,12500
+1.6,MultinomialNB(alpha=0.5),positive,0.8857,0.8451,0.8649,12500
+2.1,LinearSVC,negative,0.8958,0.8975,0.8967,12500
+2.1,LinearSVC,positive,0.8973,0.8956,0.8965,12500
+3.2,SVC(kernel='rbf'),negative,0.7954,0.8227,0.8088,12500
+3.2,SVC(kernel='rbf'),positive,0.8164,0.7884,0.8022,12500

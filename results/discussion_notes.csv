@@ -1,0 +1,13 @@
+topic,finding,evidence_exp_id
+Validation-selected best model,2.1 (LinearSVC) was selected by validation F1=0.9065. Its final test F1=0.8965 and test AUC=0.9619.,2.1
+Highest test F1 check,"For checking only, the highest test F1 was 2.1 (LinearSVC) with test F1=0.8965. The report should still say models were chosen by validation F1.",2.1
+Best Naive Bayes model,1.6 was the best NB setup by validation F1=0.8761; its final test F1=0.8649.,1.6
+Impact of basic preprocessing,Raw text test F1=0.7990 vs cleaned text test F1=0.8009. Basic cleaning had only a small effect because BoW still sees similar key words.,1.1 vs 1.2
+Impact of stopword removal,With stopword removal test F1=0.8083 vs cleaned text test F1=0.8009. This checks whether common words add noise for NB.,1.2 vs 1.3
+Laplace smoothing alpha,Alpha was tuned on the validation set. The alpha_tuning_curve.png file shows which alpha gave the best validation F1.,1.4
+BoW vs TF-IDF,BoW test F1=0.8009 vs TF-IDF test F1=0.8176. TF-IDF can help because it reduces the weight of very common words.,1.2 vs 1.5
+Unigram vs bigram TF-IDF,Unigram test F1=0.8176 vs unigram+bigram test F1=0.8649. Bigrams can capture short phrases such as 'not good'.,1.5 vs 1.6
+Traditional classifiers,"Best NB test F1=0.8649, LinearSVC test F1=0.8965, and Logistic Regression test F1=0.8888. This compares generative and discriminative classifiers using the same feature setting.",1.6 vs 2.1 vs 2.2
+SBERT sentence embeddings,"SBERT+LR test F1=0.8095 and SBERT+RBF SVC test F1=0.8022. SBERT is more modern, but it may not beat TF-IDF on long IMDb reviews without fine-tuning.","3.1, 3.2"
+Runtime trade-off,NB is fastest; LinearSVC and Logistic Regression take longer; SBERT needs an embedding step before classification. The training_time_comparison.png chart supports this point.,training_time_comparison.png
+Common error patterns,"The error-analysis table checks difficult wrong predictions, including negation, mixed sentiment, sarcasm, and implicit sentiment.",error_analysis_10_examples.csv

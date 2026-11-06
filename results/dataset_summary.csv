@@ -1,0 +1,4 @@
+split,num_reviews,negative_count,positive_count,avg_words_per_review
+train,20000,10000,10000,233.14
+validation,5000,2500,2500,236.38
+test,25000,12500,12500,228.53

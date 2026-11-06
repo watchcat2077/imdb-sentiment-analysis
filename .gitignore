@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Large generated artefacts (re-created by the notebook)
+*.npy
+*.zip
+csci323_outputs/

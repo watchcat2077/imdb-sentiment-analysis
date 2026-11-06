@@ -1,0 +1,11 @@
+experiment_id,tier,aim,text_input,feature,classifier
+1.1,Tier 1,Baseline: raw text + CountVectorizer + MultinomialNB,Raw text,Count unigram,MultinomialNB
+1.2,Tier 1,Test basic preprocessing,Clean text,Count unigram,MultinomialNB
+1.3,Tier 1,Test stopword removal,Clean text without stopwords,Count unigram,MultinomialNB
+1.4,Tier 1,Tune Naive Bayes alpha,Clean text,Count unigram,MultinomialNB with tuned alpha
+1.5,Tier 1,Compare Count with TF-IDF,Clean text,TF-IDF unigram,MultinomialNB
+1.6,Tier 1,Test unigram + bigram,Clean text,TF-IDF unigram + bigram,MultinomialNB
+2.1,Tier 2,Compare LinearSVC,Best Tier 1 text setting,Best Tier 1 feature setting,LinearSVC
+2.2,Tier 2,Compare Logistic Regression,Best Tier 1 text setting,Best Tier 1 feature setting,LogisticRegression
+3.1,Tier 3,Use SBERT sentence embeddings,HTML-cleaned natural text,SBERT all-MiniLM-L6-v2,LogisticRegression
+3.2,Tier 3,Use SBERT with non-linear SVC,HTML-cleaned natural text,SBERT all-MiniLM-L6-v2,SVC RBF
